@@ -1,0 +1,39 @@
+body{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+button{
+    height: 5vh;
+    width: 25vw;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 3px 3px 3px gray;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+button::before{
+    content: '';
+    height: 5vh;
+    width: 0;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(to right,rgb(91,164,7),rgb(231,255,154)100%);
+    transition: 0.9s ease-in-out;
+    display: block;
+}
+
+button:hover::before{
+    width: 25vw;
+}
